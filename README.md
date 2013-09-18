@@ -10,7 +10,7 @@ Note that this Spark ONLY provides the authorization mechanism. There's an examp
 
 Add this to you composer.json file, in the require object;
 
-    "taylorotwell/laravel-oauth2": "0.2.*"
+    "salesan/laravel-oauth2": "0.2.*"
 
 After that, run composer install to install Laravel OAuth 2.0.
 
