@@ -44,13 +44,13 @@ class Windowslive extends Provider
 
 		// create a response from the request and return it
 		return array(
-			'uid' 		=> $user->id,
-			'name' 		=> $user->name,
-			'nickname' => strtolower(Laravel\Str::slug($user->name, '_')),
+			'uid' 		=> isset($user->id) ? $user->id : "",
+			'name' 		=> isset($user->name) ? $user->name : "",
+			'nickname' => isset($user->name) ? strtolower(Laravel\Str::slug($user->name, '_')) : "",
 //			'location' 	=> $user[''], # scope wl.postal_addresses is required
 										  # but won't be implemented by default
-			'locale' 	=> $user->locale,
-			'urls' 		=> array('Windows Live' => $user->link),
+			'locale' 	=> isset($user->locale) ? $user->locale : "",
+			'urls' 		=> array('Windows Live' => isset($user->link) ? $user->link : "") ,
 		);
 	}
 }

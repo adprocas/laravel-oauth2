@@ -31,13 +31,13 @@ class Github extends Provider {
 
 		// Create a response from the request
 		return array(
-			'uid' => $user->id,
-			'nickname' => $user->login,
-			'name' => $user->name,
-			'email' => $user->email,
+			'uid' => isset($user->id) ? $user->id : "",
+			'nickname' => isset($user->login) ? $user->login : "",
+			'name' => isset($user->name) ? $user->name : "",
+			'email' => isset($user->email) ? $user->email : "",
 			'urls' => array(
-			  'GitHub' => 'http://github.com/'.$user->login,
-			  'Blog' => $user->blog,
+			  'GitHub' => isset($user->login) ? 'http://github.com/'.$user->login : "",
+			  'Blog' => isset($user->blog) ? $user->blog : "",
 			),
 		);
 	}

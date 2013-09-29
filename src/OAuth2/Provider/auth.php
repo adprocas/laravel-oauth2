@@ -68,20 +68,20 @@ return array(
 
 	'oauth_providers' => array(
 		'twitter' => array(
-			'client_id' => 'EnoBgzm1clHnk04AfsT7w',
-			'secret' => 'He0KVBfkhuEXoOXJMuP7jepYGjzNsfo3DUBN2dj7m4I',
+			'client_id' => '',
+			'secret' => '',
 		),
 		'vkontakte' => array(
-			'client_id' => '3733726',
-			'secret' => 'SvX3rV8gKlOOjwXrPqgy',
+			'client_id' => '',
+			'secret' => '',
 		),
 		'facebook' => array(
-			'client_id' => '173213859523164',
-			'secret' => '8ae9c75d3142e5621778f289b98d09e9',
+			'client_id' => '',
+			'secret' => '',
 		),
 		'google' => array (
-			'client_id' => '137364554504.apps.googleusercontent.com',
-			'secret' => 'F-jSQugnAXlGxWh3iBRk72vp',
+			'client_id' => '',
+			'secret' => '',
 		),
 
 

@@ -37,9 +37,9 @@ class Vkontakte extends Provider
 
 		// Create a response from the request
 		return array(
-			'uid' => $user->uid,
+			'uid' => isset($user->uid) ? $user->uid : "",
 			'nickname' => isset($user->nickname) ? $user->nickname : "",
-			'name' => $user->first_name.' '.$user->last_name,
+			'name' => isset($user->first_name && $user->last_name) ? $user->first_name.' '.$user->last_name : "",
 			'email' => isset($user->email) ? $user->email : "",
 			'image' => isset($user->photo_max_orig) ? $user->photo_max_orig : "",
 		);

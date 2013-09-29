@@ -33,15 +33,15 @@ class Facebook extends Provider
 
 		// Create a response from the request
 		return array(
-			'uid' => $user->id,
-			'nickname' => $user->username,
-			'name' => $user->name,
-			'email' => $user->email,
-			'location' => $user->hometown->name,
-			// 'description' => $user->bio,
-			'image' => 'https://graph.facebook.com/me/picture?type=normal&access_token='.$token->access_token,
+			'uid' => (isset($user->id) ? $user->id : ""),
+			'nickname' => (isset($user->username) ? $user->username : ""),
+			'name' => (isset($user->name) ? $user->name : ""),
+			'email' => (isset($user->email) ? $user->email : ""),
+			'location' => (isset($user->hometown->name) ? $user->hometown->name : ""),
+			'description' => (isset($user->bio) ? $user->bio : "") ,
+			'image' => (isset($user->access_token) ? 'https://graph.facebook.com/me/picture?type=normal&access_token='.$token->access_token : ""),
 			'urls' => array(
-			  'Facebook' => $user->link,
+			  'Facebook' => (isset($user->link) ? $user->link : ""),
 			),
 		);
 	}

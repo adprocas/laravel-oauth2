@@ -67,14 +67,14 @@ class Google extends Provider {
 		$user = json_decode(file_get_contents($url), true);
 
 		return array(
-			'uid' => $user['id'],
+			'uid' => isset($user['id']) ? $user['id'] : "",
 			'nickname' => "",
-			'name' => $user['name'],
-			'first_name' => $user['given_name'],
-			'last_name' => $user['family_name'],
-			'email' => $user['email'],
+			'name' => isset($user['name']) ? $user['name'] : "",
+			'first_name' => isset($user['given_name']) ? $user['given_name'] : "",
+			'last_name' => isset($user['family_name']) ? $user['family_name'] : "",
+			'email' => isset($user['email']) ? $user['email'] : "",
 			'location' => null,
-			'image' => $user['picture'],
+			'image' => isset($user['picture']) ? $user['picture'] : "",
 			'description' => null,
 			'urls' => array(),
 		);
