@@ -1,9 +1,9 @@
 {
-	"name": "salesan/laravel-oauth2",
+	"name": "adprocas/laravel-oauth2",
 	"type": "library",
 	"description": "Authorize users in your application with multiple OAuth 2.0 providers.",
 	"keywords": ["laravel", "oauth2"],
-	"homepage": "https://github.com/salesan/laravel-oauth2",
+	"homepage": "https://github.com/adprocas/laravel-oauth2",
 	"require": {
 		"laravel/framework": "4.0.*"
 	},
